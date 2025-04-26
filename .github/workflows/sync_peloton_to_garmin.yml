@@ -37,41 +37,113 @@ jobs:
         cat <<EOT > /app/configuration.local.json 
         {
           "App": {
-            "EnablePolling": false,
-            "CheckForUpdates": true,
-            "CloseConsoleOnFinish": true
+            "EnablePolling": true,
+            "PollingIntervalSeconds": 86400,
+            "CheckForUpdates": true
           },
+
           "Format": {
-            "Fit": true,
-            "Json": false,
-            "Tcx": false,
-            "SaveLocalCopy": ${{ github.event.inputs.saveLocalCopy || false }},
-            "IncludeTimeInHRZones": false,
-            "IncludeTimeInPowerZones": false,
-            "StackedWorkouts": {
-              "AutomaticallyStackWorkouts": false,
-              "MaxAllowedGapSeconds": 300
+          "Fit": true,
+          "Json": false,
+          "Tcx": false,
+          "SaveLocalCopy": true,
+          "IncludeTimeInHRZones": false,
+          "IncludeTimeInPowerZones": false,
+          "StackedWorkouts": {
+            "AutomaticallyStackWorkouts": false,
+            "MaxAllowedGapSeconds": 300
+          },
+          "DeviceInfoSettings": {
+            "none": {
+              "name": "Instinct 2S",
+              "unitId": 3467573777,
+              "productID": 3889,
+              "version": {
+                "versionMajor": 16,
+                "versionMinor": 11,
+                "buildMajor": 0,
+                "buildMinor": 0
+              }
+            },
+            "cycling": {
+              "name": "Instinct 2S",
+              "unitId": 3467573777,
+              "productID": 3889,
+              "version": {
+                "versionMajor": 16,
+                "versionMinor": 11,
+                "buildMajor": 0,
+                "buildMinor": 0
+              }
+            },
+            "rowing": {
+              "name": "Epix",
+              "unitId": 3413684246,
+              "productID": 3943,
+              "manufacturerId": 1,
+              "version": {
+                "versionMajor": 10,
+                "versionMinor": 43.0,
+                "buildMajor": 0,
+                "buildMinor": 0.0
+              }
             }
           },
-          "Peloton": {
-            "NumWorkoutsToDownload": ${{ github.event.inputs.workoutsToDownload || env.DEFAULT_WORKOUT_NUM }},
+        "Cycling": {
+          "PreferredLapType": "Class_Targets"
+        },
+        "Running": {
+          "PreferredLapType": "Distance"
+        },
+        "Rowing": {
+          "PreferredLapType": "Class_Segments"
+        },
+        "Strength": {
+          "DefaultSecondsPerRep": 3
+        },
+        "WorkoutTitleTemplate": "{Peloton - {PelotonWorkoutTitle}} with {{PelotonInstructorName}}"
+        }
+        },
+    
+        "Peloton": {
+          "Email": "",
+          "Password": "",
+          "NumWorkoutsToDownload": 1,
+          "ExcludeWorkoutTypes": [ ]
+        },
+      
+        "Garmin": {
+          "Email": "",
+          "Password": "",
+          "TwoStepVerificationEnabled": false,
+          "Upload": false,
+          "FormatToUpload": "fit"
+        },
+      
+        "Observability": {
+      
+          "Prometheus": {
+            "Enabled": false,
+            "Port": 4000
           },
-          "Garmin": {
-            "Upload": true,
-            "FormatToUpload": "fit"
+      
+          "Jaeger": {
+            "Enabled": false,
+            "AgentHost": "localhost",
+            "AgentPort": 6831
           },
-          "Observability": {
-            "Prometheus": {
-              "Enabled": false
-            },
-            "Jaeger": {
-              "Enabled": false
-            },
-            "Serilog": {
-              "Using": [ "Serilog.Sinks.Console"],
-              "MinimumLevel": "Information"
+      
+          "Serilog": {
+            "Using": [ "Serilog.Sinks.Console", "Serilog.Sinks.File" ],
+            "MinimumLevel": {
+              "Default": "Information",
+              "Override": {
+                "Microsoft": "Error",
+                "System": "Error"
+              }
             }
           }
+        }
         }
         EOT
     
