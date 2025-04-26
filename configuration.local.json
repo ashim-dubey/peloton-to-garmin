@@ -10,8 +10,8 @@
     "Json": false,
     "Tcx": false,
     "SaveLocalCopy": true,
-    "IncludeTimeInHRZones": false,
-    "IncludeTimeInPowerZones": false,
+    "IncludeTimeInHRZones": true,
+    "IncludeTimeInPowerZones": truee,
     "StackedWorkouts": {
       "AutomaticallyStackWorkouts": false,
       "MaxAllowedGapSeconds": 300
