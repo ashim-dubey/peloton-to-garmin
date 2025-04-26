@@ -11,7 +11,7 @@
     "Tcx": false,
     "SaveLocalCopy": true,
     "IncludeTimeInHRZones": true,
-    "IncludeTimeInPowerZones": truee,
+    "IncludeTimeInPowerZones": true,
     "StackedWorkouts": {
       "AutomaticallyStackWorkouts": false,
       "MaxAllowedGapSeconds": 300
