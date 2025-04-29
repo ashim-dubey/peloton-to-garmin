@@ -72,57 +72,6 @@ jobs:
               "MinimumLevel": "Information"
             }
           },
-          "DeviceInfoSettings": {
-            "none": {
-               "name": "Instinct 2S",
-              "unitId": 3467573777,
-              "productID": 3889,
-              "version": {
-                "versionMajor": 16,
-                "versionMinor": 11,
-                "buildMajor": 0,
-                "buildMinor": 0
-              }
-            },
-            "cycling": {
-              "name": "Instinct 2S",
-              "unitId": 3467573777,
-              "productID": 3889,
-              "version": {
-                "versionMajor": 16,
-                "versionMinor": 11,
-                "buildMajor": 0,
-                "buildMinor": 0
-              }
-            },
-            "rowing": {
-              "name": "Epix",
-              "unitId": 3413684246,
-              "productID": 3943,
-              "manufacturerId": 1,
-              "version": {
-                "versionMajor": 10,
-                "versionMinor": 43.0,
-                "buildMajor": 0,
-                "buildMinor": 0.0
-              }
-            }
-          },
-          "Cycling": {
-            "PreferredLapType": "Class_Targets"
-          },
-          "Running": {
-            "PreferredLapType": "Distance"
-          },
-          "Rowing": {
-            "PreferredLapType": "Class_Segments"
-          },
-          "Strength": {
-            "DefaultSecondsPerRep": 3
-          },
-          "WorkoutTitleTemplate": "{Peloton - {PelotonWorkoutTitle}} with {{PelotonInstructorName}}"
-        }
-        },
         }
         EOT
     
