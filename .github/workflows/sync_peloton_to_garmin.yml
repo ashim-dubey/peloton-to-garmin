@@ -84,6 +84,7 @@ jobs:
                   "buildMinor": 0.0
                 }
               }
+            },
             "WorkoutTitleTemplate": "Peloton - {{PelotonWorkoutTitle}} with {{PelotonInstructorName}}",
             "StackedWorkouts": {
               "AutomaticallyStackWorkouts": false,
