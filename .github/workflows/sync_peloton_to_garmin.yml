@@ -72,6 +72,17 @@ jobs:
                   "buildMinor": 0
                 }
               },
+              "rowing": {
+                "name": "Instinct 2S",
+                "unitId": 3467573777,
+                "productID": 3889,
+                "version": {
+                  "versionMajor": 16,
+                  "versionMinor": 11,
+                  "buildMajor": 0,
+                  "buildMinor": 0
+                }
+              },
             "WorkoutTitleTemplate": "Peloton - {{PelotonWorkoutTitle}} with {{PelotonInstructorName}}",
             "StackedWorkouts": {
               "AutomaticallyStackWorkouts": false,
@@ -118,4 +129,5 @@ jobs:
         name: output
         path: ${{ env.OUTPUT_DIR }}
         if-no-files-found: error
+
 
