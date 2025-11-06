@@ -21,6 +21,7 @@
           "name": "Instinct 2S",
           "unitId": 3467573777,
           "productID": 3889,
+          "manufacturerId": 1,
           "version": {
             "versionMajor": 16,
             "versionMinor": 11,
@@ -32,6 +33,7 @@
           "name": "Instinct 2S",
           "unitId": 3467573777,
           "productID": 3889,
+          "manufacturerId": 1,
           "version": {
             "versionMajor": 16,
             "versionMinor": 11,
@@ -43,6 +45,7 @@
           "name": "Instinct 2S",
           "unitId": 3467573777,
           "productID": 3889,
+          "manufacturerId": 1,
           "version": {
             "versionMajor": 16,
             "versionMinor": 11,
@@ -107,5 +110,3 @@
     }
   }
 }
-
-
