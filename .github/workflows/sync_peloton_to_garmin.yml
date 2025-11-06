@@ -53,7 +53,6 @@ jobs:
                 "name": "Instinct 2S",
                 "unitId": 1,
                 "productID": 3889,
-                "manufacturerId": 1,
                 "version": {
                   "versionMajor": 16,
                   "versionMinor": 11,
@@ -129,5 +128,6 @@ jobs:
         name: output
         path: ${{ env.OUTPUT_DIR }}
         if-no-files-found: error
+
 
 
