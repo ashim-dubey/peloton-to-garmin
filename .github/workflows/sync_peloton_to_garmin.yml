@@ -8,7 +8,7 @@ on:
     inputs:
       workoutsToDownload:
         type: number
-        default: "10"
+        default: "5"
       saveLocalCopy:
         type: boolean
         default: false
@@ -48,46 +48,11 @@ jobs:
             "SaveLocalCopy": ${{ github.event.inputs.saveLocalCopy || false }},
             "IncludeTimeInHRZones": false,
             "IncludeTimeInPowerZones": false,
-            "DeviceInfoSettings": {
-              "none": {
-                "name": "Instinct 2S",
-                "unitId": 1,
-                "productID": 3889,
-                "version": {
-                  "versionMajor": 16,
-                  "versionMinor": 11,
-                  "buildMajor": 0,
-                  "buildMinor": 0
-                }
-              },
-              "cycling": {
-                "name": "Instinct 2S",
-                "unitId": 3467573777,
-                "productID": 3889,
-                "version": {
-                  "versionMajor": 16,
-                  "versionMinor": 11,
-                  "buildMajor": 0,
-                  "buildMinor": 0
-                }
-              },
-              "rowing": {
-                "name": "Instinct 2S",
-                "unitId": 3467573777,
-                "productID": 3889,
-                "version": {
-                  "versionMajor": 16,
-                  "versionMinor": 11,
-                  "buildMajor": 0,
-                  "buildMinor": 0
-                }
-              }
-            },
-            "WorkoutTitleTemplate": "Peloton - {{PelotonWorkoutTitle}} with {{PelotonInstructorName}}",
             "StackedWorkouts": {
               "AutomaticallyStackWorkouts": false,
               "MaxAllowedGapSeconds": 300
-            },
+            }
+          },
           "Peloton": {
             "NumWorkoutsToDownload": ${{ github.event.inputs.workoutsToDownload || env.DEFAULT_WORKOUT_NUM }},
           },
@@ -106,7 +71,7 @@ jobs:
               "Using": [ "Serilog.Sinks.Console"],
               "MinimumLevel": "Information"
             }
-          },
+          }
         }
         EOT
     
@@ -128,7 +93,3 @@ jobs:
         name: output
         path: ${{ env.OUTPUT_DIR }}
         if-no-files-found: error
-
-
-
-
