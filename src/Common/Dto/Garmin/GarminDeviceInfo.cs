@@ -49,16 +49,16 @@
 			}
 		};
 
-		public static readonly GarminDeviceInfo Forerunner945 = new GarminDeviceInfo()
+		public static readonly GarminDeviceInfo Instinct2S = new GarminDeviceInfo()
 		{
-			Name = "Forerunner 945", // Max 20 Chars
-			ProductID = 3113, // GarminProduct.Fr945,
-			UnitId = 1,
+			Name = "Instinct 2S", // Max 20 Chars
+			ProductID = 3889, // GarminProduct.Fr945,
+			UnitId = 3467573777,
 			ManufacturerId = 1, // Garmin
 			Version = new GarminDeviceVersion()
 			{
-				VersionMajor = 19,
-				VersionMinor = 2,
+				VersionMajor = 17,
+				VersionMinor = 07,
 				BuildMajor = 0,
 				BuildMinor = 0,
 			}
