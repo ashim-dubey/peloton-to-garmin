@@ -41,7 +41,7 @@
             "buildMinor": 0
           }
         },
-        "rowing": {
+        "meditation": {
           "name": "Instinct 2S",
           "unitId": 3467573777,
           "productID": 3889,
@@ -109,4 +109,3 @@
       }
     }
   }
-}
