@@ -19,7 +19,7 @@
 
 	public static class GarminDevices
 	{
-		public static readonly GarminDeviceInfo TACXDevice = new GarminDeviceInfo()
+		/*public static readonly GarminDeviceInfo TACXDevice = new GarminDeviceInfo()
 		{
 			Name = "TacxTrainingAppWin", // Max 20 Chars
 			ProductID = 20533, // GarminProduct.TacxTrainingAppWin,
@@ -47,7 +47,7 @@
 				BuildMajor = 0,
 				BuildMinor = 0,
 			}
-		};
+		}; */
 
 		public static readonly GarminDeviceInfo Instinct2S = new GarminDeviceInfo()
 		{
