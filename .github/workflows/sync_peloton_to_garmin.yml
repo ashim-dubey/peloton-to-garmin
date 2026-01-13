@@ -13,7 +13,7 @@ on:
         type: boolean
         default: false
   schedule:
-    - cron: '* * * * *'
+    - cron: '0 9 * * *'
 
 env:
   OUTPUT_DIR: /app/output
@@ -131,5 +131,6 @@ jobs:
         name: output
         path: ${{ env.OUTPUT_DIR }}
         if-no-files-found: error
+
 
 
